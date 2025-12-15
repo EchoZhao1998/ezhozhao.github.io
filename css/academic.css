@@ -11959,3 +11959,43 @@ div.mermaid {
 html[dir="rtl"] body {
     text-align: right
 }
+
+/* === Echo Zhao color system === */
+
+:root {
+  --accent-color: #C97A2B;
+  --text-color: #1F2933;
+  --muted-text: #6B7280;
+  --border-color: #E5E7EB;
+}
+
+body {
+  color: var(--text-color);
+  background-color: #FFFFFF;
+}
+
+/* Links */
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Navigation */
+.nav-link:hover,
+.navbar-brand:hover {
+  color: var(--accent-color);
+}
+
+/* Icons (Font Awesome, Academicons) */
+.network-icon i {
+  color: var(--muted-text);
+  transition: color 0.2s ease;
+}
+
+.network-icon i:hover {
+  color: var(--accent-color);
+}
