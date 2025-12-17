@@ -1,0 +1,32 @@
+/* ================================
+   Blog Theme Color Overrides
+   ================================ */
+
+/* Header title */
+.s-header__logotext a {
+  color: #C97A2B;
+}
+
+.s-header__logotext a:hover {
+  color: #b36a23; /* slightly darker for hover */
+}
+
+/* Tagline text (keep calm, not loud) */
+.s-header__tagline {
+  color: #555;
+}
+
+/* Links inside header */
+.s-header a {
+  color: #C97A2B;
+}
+
+.s-header a:hover {
+  color: #b36a23;
+}
+
+/* Navigation underline / active state */
+.s-header__nav a:hover,
+.s-header__nav .current a {
+  color: #C97A2B;
+}
