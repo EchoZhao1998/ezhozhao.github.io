@@ -30,3 +30,8 @@
 .s-header__nav .current a {
   color: #C97A2B;
 }
+
+/* Header background color */
+.s-header {
+  background-color: #F7EFE6; /* very light warm neutral */
+}
