@@ -2658,3 +2658,15 @@ input[type="submit"]:hover {
 .s-footer a:hover {
   color: #C97A2B;
 }
+
+/* Article links in Blog page */
+.article-links a {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.article-links a + a::before {
+  content: "·";
+  margin: 0 0.8rem;
+  color: #aaa;
+}
