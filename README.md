@@ -24,7 +24,7 @@ Welcome to [Echo's personal website](https://echozhao1998.github.io/), a digital
 
 ## Explore
 
-- **News**: Stay updated with Echo's latest activities, including recent publications, project launches, and notable achievements.
+- **News**: Stay updated with Echo's latest activities, tracking my growth!
   
 - **Projects**: Explore Echo's endeavors and latest projects.
 
