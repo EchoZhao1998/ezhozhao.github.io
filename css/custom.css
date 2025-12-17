@@ -35,3 +35,10 @@
 .s-header {
   background-color: #F7EFE6; /* very light warm neutral */
 }
+
+/* Blog post images - rounded corners like Projects page */
+
+.entry__content-media img {
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
