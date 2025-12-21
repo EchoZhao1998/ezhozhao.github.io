@@ -12115,11 +12115,13 @@ a:hover {
 .newsdate {
   font-weight: 600;
   color: #1f2933;
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 .newscontent {
   line-height: 1.6;
+  overflow-wrap: anywhere;
 }
 
 .newsdate {
@@ -12129,10 +12131,11 @@ a:hover {
 .newsdate::after {
   content: "";
   position: absolute;
-  right: -12px;
-  top: 0.4em;
+  left: calc(100% + 8px);
+  top: 50%;
+  transform: translateY(-50%);
   width: 6px;
   height: 6px;
-  background-color: #c97a2b; /* my accent color */
+  background-color: #C97A2B; /* my accent color */
   border-radius: 50%;
 }
