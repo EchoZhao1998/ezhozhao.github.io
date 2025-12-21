@@ -12120,6 +12120,23 @@ a:hover {
   white-space: nowrap;
   overflow-wrap: normal;
   text-align: left;
+  /* prevent long dates overflowing into the adjacent column */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ensure the date text (the <b>) truncates cleanly inside the column */
+.newsdate b {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* always align both columns to the top for consistent baseline */
+.newsdate, .newscontent {
+  align-self: flex-start;
 }
 
 /* allow date to wrap on small screens to avoid overflow */
