@@ -12110,14 +12110,26 @@ a:hover {
 
 .newsitem {
   margin-bottom: 1.2rem;
+  align-items: flex-start; /* ensure date and content align from the top */
 }
 
 .newsdate {
   font-weight: 600;
   color: #1f2933;
-  white-space: normal;
-  overflow-wrap: anywhere;
+  /* keep date on a single line on medium+ screens */
+  white-space: nowrap;
+  overflow-wrap: normal;
   text-align: left;
+}
+
+/* allow date to wrap on small screens to avoid overflow */
+@media (max-width: 991.98px) {
+  .newsdate {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    text-align: left;
+    padding-right: 0;
+  }
 }
 
 .newscontent {
@@ -12145,16 +12157,21 @@ a:hover {
 .newsdate::after { display: none; }
 
 @media (min-width: 992px) {
-  .newsdate { text-align: right; padding-right: 1rem; }
+  /* more breathing room between the date column and content */
+  .newsdate { text-align: right; padding-right: 1.75rem; }
 }
 
+/* small marker at the start of each news content; change size/spacing for a neater look */
 .newscontent::before {
   content: "";
   display: inline-block;
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
   background-color: #c97a2b;
   border-radius: 50%;
-  margin-right: 12px;
-  vertical-align: middle;
+  margin-right: 14px; /* space between marker and text */
+  vertical-align: text-top; /* better alignment with multi-line content */
 }
+
+/* helper to remove bullets if you prefer no markers */
+.no-bullet .newscontent::before { display: none; }
