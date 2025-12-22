@@ -12180,6 +12180,42 @@ a:hover {
 /* helper to remove bullets if you prefer no markers */
 .no-bullet .newscontent::before { display: none; }
 
+/* =========================
+   NEWS: stacked layout (date above content)
+   Scoped to #news-list so other grid rules remain unchanged
+   ========================= */
+#news-list .newsitem {
+  display: block;                 /* stack date above content */
+  margin-bottom: 1.25rem;         /* breathing room */
+}
+
+#news-list .newsdate {
+  display: block;
+  font-weight: 600;
+  color: #1f2933;
+  text-align: left;               /* consistent left alignment */
+  white-space: normal;            /* allow wrapping when necessary */
+  padding-right: 0;               /* remove previous right padding */
+  margin-bottom: 0.5rem;          /* space between date and content */
+  overflow: visible;              /* prevent ellipsis/truncation here */
+  text-overflow: clip;
+}
+
+#news-list .newscontent {
+  display: block;
+  margin-left: 0;
+  padding-left: 0;
+  line-height: 1.6;
+}
+
+/* keep the marker option available; default hidden when .no-bullet is present */
+#news-list:not(.no-bullet) .newscontent::before { display: inline-block; }
+
+/* Optional: slightly smaller date on small screens for better flow */
+@media (max-width: 576px) {
+  #news-list .newsdate { font-size: 0.98rem; }
+}
+
 
 .newsitem {
   display: flex;
@@ -12195,5 +12231,3 @@ a:hover {
 .newscontent {
   flex: 1;
 }
-
-
