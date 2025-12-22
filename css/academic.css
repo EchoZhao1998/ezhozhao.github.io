@@ -12175,3 +12175,23 @@ a:hover {
 
 /* helper to remove bullets if you prefer no markers */
 .no-bullet .newscontent::before { display: none; }
+
+
+.newsitem {
+  display: flex;
+  align-items: flex-start;
+}
+
+.newsdate {
+  min-width: 120px;
+  margin-right: 1.5rem;
+  line-height: 1.2;
+}
+
+.newscontent {
+  flex: 1;
+}
+
+h1 {
+  margin-bottom: 2rem;
+}
